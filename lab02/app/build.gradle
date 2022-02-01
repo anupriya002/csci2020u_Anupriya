@@ -22,9 +22,16 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
+
+    // implementation 'com.walterjwhite.java.modules.csv.modules:apache-commons-csv:0.0.17'
+    implementation 'org.apache.commons:commons-csv:1.8'
+    
+
 }
 
 application {
     // Define the main class for the application.
     mainClass = 'lab02.App'
 }
+
+
