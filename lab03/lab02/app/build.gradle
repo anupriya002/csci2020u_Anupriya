@@ -6,6 +6,15 @@
  * User Manual available at https://docs.gradle.org/7.3.3/userguide/building_java_projects.html
  */
 
+buildscript {
+    repositories {
+        flatDir dirs: '../proguard-7.1.0-beta5/lib'
+    }
+    dependencies {
+        classpath 'com.guardsquare:proguard-gradle:7.0.1'
+    }
+}
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
@@ -25,13 +34,32 @@ dependencies {
 
     // implementation 'com.walterjwhite.java.modules.csv.modules:apache-commons-csv:0.0.17'
     implementation 'org.apache.commons:commons-csv:1.8'
+
+    //progaurd
+    //classpath 'com.guardsquare:proguard-gradle:7.1.0-beta5'
     
 
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'lab02.App'
+    mainClassName = 'csci2020u.lab02.CSVDemo'
+}
+
+//part 2
+version = '1.0'
+jar{
+    manifest{
+            attributes 'Main-Class' : mainClassName,
+            'Implementation-Title': 'Lab03',
+            'Implementation-Version': version
+    }
 }
 
 
+//part 3 - minify task
+task(minify, dependsOn: 'jar', type: proguard.gradle.ProGuardTask) {
+    configuration 'proguard.cfg'
+    injars'build/libs/lab03-1.0.jar'
+    outjars'build/libs/lab03-1.0.min.jar'
+}
