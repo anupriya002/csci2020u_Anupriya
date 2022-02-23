@@ -15,6 +15,7 @@ public class FruitDriver {
         System.out.println ("Enter an integer to add any of the fruits above to your fruit basket. Select 6 to exit the program.");
         System.out.println("Enter an option: ");
 
+        //if input is out of range, prompt user to select again.
         int option = input.nextInt();
         while(option < 1 || option > 6){
             System.out.println ("That fruit is not available or it does not exist. Please select another fruit.");
@@ -22,6 +23,7 @@ public class FruitDriver {
             option = input.nextInt();
         }
 
+        //program exits if user inputs 6
         while (option >= 1 && option <= 6){
             if (option == 6){
                 System.out.println("Program Exited.");
@@ -58,9 +60,5 @@ public class FruitDriver {
                 option = input.nextInt();
             }
         }
-
-
-
-
     }
 }

@@ -1,25 +1,26 @@
 public class fruitBasket {
 
-    public Fruit getFruit(int fruitName){
+    //utilizes user input to determine which class to instantiate
+    public Fruit getFruit(int fruitSelected){
 
-        //check if the fruit has a name(must have one to exist) -> always check for null first - best practice
-        if(fruitName < 1 || fruitName > 5){
+        //if selected input is out of range, return null
+        if(fruitSelected < 1 || fruitSelected > 5){
             System.out.println("Fruit does not exist(Out of Bounds).");
             return null;
         }
-        if (fruitName == 1){ //apple selected by user
+        if (fruitSelected == 1){ //apple selected by user (1rst option)
             return new Apple();
 
-        } else if (fruitName == 2){ // banana selected by user
+        } else if (fruitSelected == 2){ // banana selected by user (2nd option)
             return new Banana();
 
-        } else if (fruitName == 3){ // Grapes selected by user
+        } else if (fruitSelected == 3){ // Grapes selected by user (3rd option)
             return new Grapes();
 
-        } else if (fruitName == 4){ //mango selected by user
+        } else if (fruitSelected == 4){ //mango selected by user(4th option)
             return new Mango();
 
-        } else if (fruitName == 5){ // orange selected by user
+        } else if (fruitSelected == 5){ // orange selected by user(5th option)
             return new Orange();
         }
 
