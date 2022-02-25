@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95ff6438-41ae-4b9a-b455-45bc9d69f7d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Apple.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Apple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Banana.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Banana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FruitDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FruitDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Grapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Grapes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Mango.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Mango.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Orange.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Orange.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fruitBasket.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fruitBasket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Apple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Banana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Banana.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fruit.java" afterDir="false" />
@@ -95,7 +81,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/FruitDriver.java</url>
-          <line>7</line>
+          <line>17</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -1,3 +1,5 @@
+//The fruitBasket class holds the getFruit() function which takes the input passed in from the user,
+// and utilizes it to create an instance of the necessary subclass(apple, banana, grapes, mango, orange).
 public class fruitBasket {
 
     //utilizes user input to determine which class to instantiate

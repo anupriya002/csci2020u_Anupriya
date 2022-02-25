@@ -1,3 +1,4 @@
+//A subclass that implements the Fruit Interface
 public class Grapes implements Fruit{
 
     //function implemented from the Fruit interface
