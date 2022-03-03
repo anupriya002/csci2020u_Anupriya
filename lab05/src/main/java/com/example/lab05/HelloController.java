@@ -2,50 +2,46 @@ package com.example.lab05;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
-//    @FXML
-//    private Label welcomeText;
-//
-//    @FXML
-//    protected void onHelloButtonClick() {
-//        welcomeText.setText("Welcome to JavaFX Application!");
-//    }
-
 public class HelloController {
-    private DataSource source = new DataSource();
 
     @FXML
-    private TableView<StudentRecord> tableView = new TableView<StudentRecord>();;
+    TableView<StudentRecord> table = new TableView<StudentRecord>();
 
-    @FXML
-    private TableColumn<StudentRecord, String> idColumn;
 
-    @FXML
-    private TableColumn<StudentRecord, Float> midtermColumn;
+    TableColumn<StudentRecord,String> sidCol = new TableColumn<StudentRecord,String>("SID");
 
-    @FXML
-    private TableColumn<StudentRecord, Float> assignmentColumn;
 
-    @FXML
-    private TableColumn<StudentRecord, Float> FinalExamColumn;
+    TableColumn<StudentRecord,Float> assignmentCol = new TableColumn<StudentRecord, Float>("Assignments");
 
-    @FXML
-    private TableColumn<StudentRecord, Float> FinalMarkColumn;
 
-    @FXML
-    private TableColumn<StudentRecord, String> LetterGradeColumn;
+    TableColumn<StudentRecord,Float> midtermCol = new TableColumn<StudentRecord,Float>("Midterm");
+
+
+    TableColumn<StudentRecord,Float> finalExamCol = new TableColumn<StudentRecord,Float>("Final Exam");
+
+
+    TableColumn<StudentRecord,Float> finalMarkCol = new TableColumn<StudentRecord,Float>("Final Mark");
+
+
+    TableColumn<StudentRecord,String> letterGradeCol = new TableColumn<StudentRecord,String>("Letter Grade");
+
 
     @FXML
     private void initialize(){
-        idColumn.setCellValueFactory(new PropertyValueFactory<StudentRecord, String>("studentID"));
-        midtermColumn.setCellValueFactory(new PropertyValueFactory<StudentRecord, Float>("midtermGrade"));
-        assignmentColumn.setCellValueFactory(new PropertyValueFactory<StudentRecord, Float>("assignmentGrade"));
-        FinalExamColumn.setCellValueFactory(new PropertyValueFactory<StudentRecord, Float>("finalExamGrade"));
-        FinalMarkColumn.setCellValueFactory(new PropertyValueFactory<StudentRecord, Float>("finalMark"));
-        LetterGradeColumn.setCellValueFactory(new PropertyValueFactory<StudentRecord, String>("letterGrade"));
-        tableView.setItems(DataSource.getAllMarks());
+        sidCol.setCellValueFactory(new PropertyValueFactory("studentID"));
+        assignmentCol.setCellValueFactory(new PropertyValueFactory("assignmentGrade"));
+        midtermCol.setCellValueFactory(new PropertyValueFactory("midtermGrade"));
+        finalExamCol.setCellValueFactory(new PropertyValueFactory("finalExamGrade"));
+        finalMarkCol.setCellValueFactory(new PropertyValueFactory("finalMark"));
+        letterGradeCol.setCellValueFactory(new PropertyValueFactory("letterGrade"));
+        table.getColumns().setAll(sidCol, assignmentCol, midtermCol, finalExamCol, finalMarkCol, letterGradeCol);
+        table.setItems(DataSource.getAllMarks());
+
     }
+
 }
