@@ -60,23 +60,23 @@ public class StudentRecord {
         }
 
         //grade D: if 50 <= finalMark <= 59
-        else if (this.finalMark >= 50 && this.finalMark <= 59){
+        else if (this.finalMark >49 && this.finalMark <= 59){
             this.letterGrade = "D";
         }
 
         //grade C: if 60 <= finalMark <= 69
-        else if (this.finalMark >= 60 && this.finalMark <= 69){
+        else if (this.finalMark >59 && this.finalMark <= 69){
             this.letterGrade = "C";
         }
 
 
         //grade B: if 70 <= finalMark <= 79
-        else if (this.finalMark >= 70 && this.finalMark <= 79){
+        else if (this.finalMark >69 && this.finalMark <= 79){
             this.letterGrade = "B";
         }
 
         //grade A: if 80 <= finalMark <= 100
-        else if (this.finalMark >= 80 && this.finalMark <= 100){
+        else if (this.finalMark >79 && this.finalMark <= 100){
             this.letterGrade = "A";
         }
 
