@@ -162,7 +162,7 @@ public class HelloApplication extends Application {
             }
             else{
                 currentStudent = marks.get(i-1).getStudentID() + "," + Float.toString(marks.get(i-1).getAssignmentGrade())
-                        + Float.toString(marks.get(i-1).getMidtermGrade()) + "," + Float.toString(marks.get(i-1).getFinalExamGrade());
+                        + "," + Float.toString(marks.get(i-1).getMidtermGrade()) + "," + Float.toString(marks.get(i-1).getFinalExamGrade());
             }
 
             printWriter.println(currentStudent);
