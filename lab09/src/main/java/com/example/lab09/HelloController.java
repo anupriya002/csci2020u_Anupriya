@@ -101,7 +101,9 @@ public class HelloController {
 
         for (int i = 0; i < stockPrices.size()-1; i++){
             gc.setStroke(color);
-            gc.strokeLine(startingX,750 - stockPrices.get(i), startingX + 7, 750 - stockPrices.get(i+1));
+            double adjusted_value = stockPrices.get(i)*0.8;
+            double adjusted_value1 = stockPrices.get(i+1)*0.8;
+            gc.strokeLine(startingX,750 - adjusted_value, startingX + 7, 750 - adjusted_value1);
 
             //update starting x value
             startingX += 7;
@@ -110,10 +112,3 @@ public class HelloController {
 
 }
 
-//    @FXML
-//    private Label welcomeText;
-//
-//    @FXML
-//    protected void onHelloButtonClick() {
-//        welcomeText.setText("Welcome to JavaFX Application!");
-//    }
