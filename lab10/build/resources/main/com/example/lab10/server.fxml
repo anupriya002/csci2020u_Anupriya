@@ -1,0 +1,25 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox fx:controller="server.Controller"
+      xmlns:fx="http://javafx.com/fxml" spacing="10">
+    <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+    <TextArea fx:id="messages" editable="false"></TextArea>
+    <Button text="Exit" onAction="#exit"></Button>
+</VBox>
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<!--<?import java.lang.*?>-->
+<!--<?import java.util.*?>-->
+<!--<?import javafx.scene.*?>-->
+<!--<?import javafx.scene.control.*?>-->
+<!--<?import javafx.scene.layout.*?>-->
+
+<!--<AnchorPane xmlns="http://javafx.com/javafx"-->
+<!--            xmlns:fx="http://javafx.com/fxml"-->
+<!--            fx:controller="com.example.lab10.Server"-->
+<!--            prefHeight="400.0" prefWidth="600.0">-->
+
+<!--</AnchorPane>-->
