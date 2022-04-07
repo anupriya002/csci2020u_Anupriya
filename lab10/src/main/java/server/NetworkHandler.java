@@ -1,5 +1,9 @@
 package server;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -8,32 +12,37 @@ public class NetworkHandler implements Runnable{
     private Controller serverController = null;
     private ServerSocket serverSocket = null;
 
+    private Socket socket = null;
+    private PrintWriter out = null;
 
     public NetworkHandler(Controller serverController, ServerSocket serverSocket){
         this.serverController = serverController;
         this.serverSocket = serverSocket;
     }
 
-
-
     public void run(){
-        try{
-            serverSocket = new ServerSocket(6666); //0 -> lets your OS select a port; port > 1024
-            serverSocket.setReuseAddress(true);
-            System.out.println("Starting server...");
-            System.out.println("Listening for incoming Client Connections....");
+        BufferedReader inStream = null;
+        try {
+            inStream = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            //create new thread
-            //thread.start()....
-            while(true){
-                Socket sock = serverSocket.accept();
-                System.out.println("Client is connected " + sock.getInetAddress().getHostAddress()); //this will display the host address of client
-                NetworkHandler client = new NetworkHandler(this.serverController, serverSocket);
-                new Thread(client).start();
+            String message;
+            while ((message = inStream.readLine()) != null){
+                System.out.println(message);
             }
-        } catch (Exception e) {
+        }
+        catch(IOException e){
             e.printStackTrace();
         }
+        finally {
+            try {
+                inStream.close();
+                socket.close();
+            }
+            catch(IOException e){
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public void stop(){
@@ -41,5 +50,17 @@ public class NetworkHandler implements Runnable{
     }
 
 
-
 }
+
+
+//complete
+//        try{
+//                System.out.println("Listening for incoming client connections ....");
+//                //create new thread thread1
+////            Thread thread1 = new Thread();
+////            thread1.start();
+//
+//
+//                } catch (Exception e) {
+//                e.printStackTrace();
+//                }

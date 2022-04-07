@@ -7,8 +7,6 @@
     <TextArea fx:id="messages" editable="false"></TextArea>
     <Button text="Exit" onAction="#exit"></Button>
 </VBox>
-
-
         <!--<?xml version="1.0" encoding="UTF-8"?>-->
 
 <!--<?import java.lang.*?>-->

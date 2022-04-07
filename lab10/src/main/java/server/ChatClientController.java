@@ -1,5 +1,8 @@
 package server;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -8,6 +11,10 @@ public class ChatClientController implements Runnable{
     private Controller serverController = null;
     private Socket socket = null;
     private boolean keepRunning = true;
+
+    @FXML
+    private TextField messageText;
+    @FXML private TextField username;
 
     public ChatClientController(Controller serverController, Socket socket){
         this.serverController = serverController;
@@ -26,17 +33,15 @@ public class ChatClientController implements Runnable{
             System.out.println("Input \"done\" to terminate connection...");
             //get input from the user to send as a message
             PrintWriter dout = new PrintWriter(sock.getOutputStream(), true);
-            String message = "";
-            while(!message.equals("done")){
-                message = Message;
-                dout.println(message);
-            }
 
+            while(!messageText.getText().equals("done")){
+                dout.println(username.getText() + ": " + messageText.getText());
+            }
         }
         catch(IOException e){
             e.printStackTrace();
         }
-
+        System.out.println("Connection terminated...");
 
 
     }
@@ -44,5 +49,6 @@ public class ChatClientController implements Runnable{
     public void run(){
         System.out.println(Thread.currentThread().getName() + ": Listening for client data...");
     }
+
 
 }
