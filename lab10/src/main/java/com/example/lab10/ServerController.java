@@ -20,8 +20,6 @@ public class ServerController implements Initializable {
     public Button exit;
 
     public void initialize(URL location, ResourceBundle resources) {
-//        serverMessages.setEditable(false);
-
         //Create new thread for server
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -29,9 +27,8 @@ public class ServerController implements Initializable {
                 try {
                     //Create server
                     ServerSocket server = new ServerSocket(6666);
-//                    System.out.println("Server online");
 
-                    //Accept connections, add messages to text area
+                    // accept any incoming connections
                     while(true) {
                         Socket socket = server.accept();
                         BufferedReader inStream = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -58,7 +55,4 @@ public class ServerController implements Initializable {
         //exit application
         System.exit(0);
     }
-
-
-
 }
