@@ -25,7 +25,7 @@ public class HelloController {
 
             //Send message to server
             PrintWriter writer = new PrintWriter(socket.getOutputStream());
-            writer.println(username.getText() + ": " + message.getText());
+            writer.println(username.getText() + ": " + message.getText() + "\n");
             writer.flush();
             username.clear();
             message.clear();
